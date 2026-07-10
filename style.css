@@ -1,1 +1,49 @@
+// Mobile Menu Navigation Toggle
+const mobileMenu = document.querySelector('#mobile-menu');
+const navLinks = document.querySelector('.nav-links');
 
+mobileMenu.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Close Mobile Menu on Link Click
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
+
+// Interactive Highlight: Active Section Navigation Indicators
+const sections = document.querySelectorAll('section');
+const navItems = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+    let currentSectionId = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= (sectionTop - sectionHeight / 3)) {
+            currentSectionId = section.getAttribute('id');
+        }
+    });
+
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href').includes(currentSectionId)) {
+            item.classList.add('active');
+        }
+    });
+});
+
+// Contact Form Prevention Submission Demo
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for reaching out, Tasin! This form submission is currently a mockup demo layout.');
+        contactForm.reset();
+    });
+}
