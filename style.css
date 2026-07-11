@@ -507,3 +507,43 @@ form button:hover{
     }
 
 }
+/* ================= MOBILE HERO ================= */
+
+@media screen and (max-width:768px){
+
+    .hero{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* Photo first */
+    .hero-img{
+        order: 1;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Text second */
+    .hero-content{
+        order: 2;
+    }
+
+    .hero-img img{
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-content p{
+        margin:20px auto;
+        max-width:90%;
+    }
+
+    .social-icons{
+        display:flex;
+        justify-content:center;
+        gap:15px;
+    }
+}
