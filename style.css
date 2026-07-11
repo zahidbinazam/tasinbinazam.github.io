@@ -462,3 +462,27 @@ form button:hover{
         0 0 40px #00ffb3,
         0 0 80px #00ffb3;
 }
+/* Hero Glow */
+
+.hello-text{
+    font-size:2rem;
+    color:#ffffff;
+    text-shadow:
+        0 0 8px #00ffb3,
+        0 0 16px #00ffb3,
+        0 0 30px #00ffb3;
+}
+
+.glow-text{
+    color:#00ffb3;
+    text-shadow:
+        0 0 10px #00ffb3,
+        0 0 20px #00ffb3,
+        0 0 40px #00ffb3,
+        0 0 80px #00ffb3;
+}
+
+.hero-title{
+    font-size:4.5rem;
+    font-weight:700;
+}
