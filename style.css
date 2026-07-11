@@ -497,9 +497,11 @@ form button:hover{
         margin: 20px auto;
     }
 
-    .social-icons{
-        display:flex;
-        justify-content:center;
+   .social-icons{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+}
     }
 
     .btn{
