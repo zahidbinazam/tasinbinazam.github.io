@@ -47,3 +47,42 @@ if (contactForm) {
         contactForm.reset();
     });
 }
+const words = [
+    "CSE Student",
+    "Future Software Engineer",
+    "Web Developer",
+    "Tech Enthusiast"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+const typing = document.querySelector(".typing-text");
+
+function typeEffect(){
+
+    const current = words[wordIndex];
+
+    if(!deleting){
+        typing.textContent=current.substring(0,charIndex++);
+    }else{
+        typing.textContent=current.substring(0,charIndex--);
+    }
+
+    let speed=120;
+
+    if(!deleting && charIndex===current.length+1){
+        deleting=true;
+        speed=1500;
+    }
+
+    if(deleting && charIndex===0){
+        deleting=false;
+        wordIndex=(wordIndex+1)%words.length;
+    }
+
+    setTimeout(typeEffect,speed);
+}
+
+typeEffect();
