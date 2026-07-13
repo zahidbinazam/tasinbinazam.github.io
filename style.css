@@ -607,13 +607,18 @@ form button:hover{
 .logo{
     font-size:1.8rem;
     font-weight:700;
-    color:#fff;
+    color:#00df9a;
     letter-spacing:1px;
+    text-shadow:
+        0 0 6px #00df9a,
+        0 0 12px #00df9a,
+        0 0 24px rgba(0,223,154,.6);
+    transition:0.3s ease;
 }
 
-.logo span{
-    color:#00df9a;
+.logo:hover{
     text-shadow:
-        0 0 8px rgba(0,223,154,.6),
-        0 0 15px rgba(0,223,154,.4);
+        0 0 10px #00df9a,
+        0 0 20px #00df9a,
+        0 0 40px #00df9a;
 }
